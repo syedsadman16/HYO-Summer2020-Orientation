@@ -1,15 +1,24 @@
 <!DOCTYPE html>
 
 <html lang="en">
+
+<script src="todo.js"></script>
+<script src="timer.js"></script>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PomoToDo</title>
 </head>
+
 <body>
   <div id="timer"/>
 
-  <div id="todo"/>
+  <div id="todo">
+    <ol id="list"></ol>
+    <input type="text" id="newTask"/>
+    <input type="button" id="newTaskButton" onclick="newTaskButtonClicked()">Add</input>
+  </div>
 
 </body>
 </html>

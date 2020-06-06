@@ -1,0 +1,23 @@
+{
+  "name": "hyo-orientation",
+  "version": "1.0.0",
+  "description": "Hack Your Own summer 2020 orientation project: team scorpius",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/focacci/HYO-Summer2020-Orientation.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/focacci/HYO-Summer2020-Orientation/issues"
+  },
+  "homepage": "https://github.com/focacci/HYO-Summer2020-Orientation#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.4"
+  }
+}

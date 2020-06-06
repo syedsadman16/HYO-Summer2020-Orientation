@@ -118,3 +118,22 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+
+##############
+#    MERN    #
+##############
+
+node_modules/
+bundle.js
+npm-debug.log
+
+/.idea
+/public
+
+.env
+.passport.js
+.DS_Store
+
+build/
+dist/

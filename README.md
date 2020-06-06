@@ -13,7 +13,7 @@
 
 2. Clone the resulting repository.
 ```
-git clone git@github.com:<your GitHub username>/https://github.com/Kenny1G/HYO-Summer2020-Orientation.git
+git clone git@github.com:<your GitHub username>/HYO-Summer2020-Orientation.git
 ```
 
 If you don't [have SSH keys set up](https://help.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) with your GitHub, you can also use

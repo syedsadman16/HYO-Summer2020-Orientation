@@ -4,7 +4,7 @@
 # BUILDING
 
 ## Requirements
-- [Node Node version 12.18.0] (https://nodejs.org/en/)
+- [Node version 12.18.0](https://nodejs.org/en/)
    - If you're on Unix/macOS/WSL, consider using [nvm](https://github.com/nvm-sh/nvm#about) to install instead.
 
 ## Setup

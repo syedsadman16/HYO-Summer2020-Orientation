@@ -6,6 +6,21 @@
   body {
     font-size: 1.50rem;
   }
+
+  html, body, div {
+    padding:0;
+    margin:0;
+  }
+
+  .header {
+    text-align: center;
+    width: 100%;
+    padding: 30px;
+    background: #1abc9c;
+    color: white;
+    font-size: 30px;
+    position: relative;
+  }
   
   section {
     color: #fff;
@@ -18,19 +33,21 @@
   
   article {
     position: absolute;
-    top: 50%;
+    top: 20%;
     left: 50%;
     transform: translate(-50%, -50%);
     padding: 10px;
     width: 100%;
-
   }
   
   h1 {
     font-size: 1.50rem;
   }
+
+  p {
+    font-size: 20px;
+  }
   
-  /* Pattern styles */
   .container {
     display: grid;
     width: 100%;
@@ -39,7 +56,7 @@
   
   .left {
     background-color: #d43d17b9;
-    position: fixed;
+    position: absolute;
     left: 0px;
     width: 50%;
     height: 50%;
@@ -50,4 +67,27 @@
     position: absolute;
     right: 0px;
     width: 50%;
+  }
+
+  .button {
+    text-align: center;
+    font-size: 16px;
+    color: rgb(15, 15, 15);
+    padding: 10px;
+    width: 25%;
+    background: #FFF;
+    transition: 0.5s;
+  }
+
+  .button:hover {
+    background-color: rgb(71, 177, 118);
+  }
+
+  input {
+    margin: 0;
+    border: none;
+    width: 50%;
+    padding: 10px;
+    font-size: 16px;
+    transition: 0.5s;
   }

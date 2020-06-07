@@ -1,10 +1,17 @@
-function addToList(input) {
-  var elem = document.createElement("LI");
-  var text = document.createTextNode(input);
-  elem.appendChild(text);
-  document.getElementById("list").appendChild(elem);
+function addListItem(input) {
+  let item = document.createElement("li");
+  let list = document.getElementById("list");
+  item.textContent = input;
+  list.appendChild(item);
+  return;
 }
 
+
 function newTaskButtonClicked() {
-  addToList(document.getElementById("newTask").value);
+  let text = document.getElementById("newTask").value;
+  if (text != "") {
+    addListItem(text);
+    document.getElementById("newTask").value = "";
+  }
+  return;
 }

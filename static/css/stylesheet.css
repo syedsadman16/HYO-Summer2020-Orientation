@@ -91,3 +91,20 @@
     font-size: 16px;
     transition: 0.5s;
   }
+
+  #countdown {
+    
+      position: relative;
+      display: inline-block;
+      font-size: 50px;
+      width: 50%;
+      padding: 10px;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      margin: 0;
+  
+  }
+
+
+  

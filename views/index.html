@@ -20,7 +20,6 @@
   <section class="container">
     <div class="left" id="timer">
       <article>
-        
         <span class="button" onclick="set(25)">Pomodoro</span>
         <span class="button" onclick="set(5)">Short Break</span>
         <span class="button" onclick="set(15)">Long Break</span>
@@ -42,7 +41,9 @@
         <input type="text" id="newTask"  placeholder="Add a new task"/>
         <span onclick="addTaskButtonClicked()" class="button" id="newTaskButton">Add</span>
         <span onclick="addPomoButtonClicked()" class="button" id="newPomoButton">Pomo</span>
-        <ul id="list" onclick=remove()></ul>
+        <div class="items">
+          <ul id="list" onclick=remove()></ul>
+        </div>
       </article>
     </div>
   </section>

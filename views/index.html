@@ -16,9 +16,6 @@
 
   <div class="header">
     <h1>PomoToDo - Productivity Web App </h1>
-    <p> Instructions: Write a new task into the text field  </p>
-    <p> Click 'Pomo' to add a timer to that task and click 'Add' to create </p>
-    <p> Once your list is populated, click 'Start' to begin the timer</p>
   </div>
 
   <section class="container">
@@ -50,15 +47,18 @@
       </article>
     </div>
 
-    <div class="right" id="todo">
+    <div class="right">
+      <div>
       <article>
-
         <h1>Todo list</h1>
-        <ol id="list"></ol>
         <input type="text" id="newTask"  placeholder="Add a new task"/>
         <span onclick="addTaskButtonClicked()" class="button" id="newTaskButton">Add</span>
         <span onclick="addPomoButtonClicked()" class="button" id="newPomoButton">Pomo</span>
       </article>
+    </div>
+      <div class="items">
+        <ul id="list" onclick=remove()></ul>
+      </div>
     </div>
   </section>
 

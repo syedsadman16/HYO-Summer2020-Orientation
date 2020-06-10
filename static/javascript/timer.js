@@ -11,3 +11,4 @@ function switchTimer(evt, timer) {
    document.getElementById(timer).style.display = "block";
    evt.currentTarget.className += " active";
 }
+

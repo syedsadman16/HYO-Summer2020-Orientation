@@ -22,28 +22,29 @@
     <div class="left" id="timer">
       <article>
            <div class="timerTabs">
-              <button class="tabLinks" onClick="switchTimer(event, 'Pomo')">Pomodoro</button>
-              <button class="tabLinks" onClick="switchTimer(event, 'sBreak')">Short Break</button>
-              <button class="tabLinks" onClick="switchTimer(event, 'lBreak'); startTimer(1)">Long Break</button>
+              <button class="tabLinks" onClick="switchTimer(event, 'Pomo'); startTimer(1, 'p');">Pomodoro</button>
+              <button class="tabLinks" onClick="switchTimer(event, 'sBreak'); startTimer(1, 's');">Short Break</button>
+              <button class="tabLinks" onClick="switchTimer(event, 'lBreak'); startTimer(1, 'l');">Long Break</button>
            </div>
 
-           <!--<div id="Pomo" class="tabContent">
-              <h1 id ="hour">10</h1>
-              <h1 id="mins">20</h1>
-              <h1 id="secs">30</h1>
+           <div id="Pomo" class="tabContent">
+              <h1 id ="phour"></h1>
+              <h1 id="pmins"></h1>
+              <h1 id="psecs"></h1>
            </div>
 
            <div id="sBreak" class="tabContent">
-              <h1 id ="hour">5</h1>
-              <h1 id="mins"></h1>
-              <h1 id="secs">30</h1>
-           </div>-->
+              <h1 id ="shour"></h1>
+              <h1 id="smins"></h1>
+              <h1 id="ssecs"></h1>
+           </div>
 
            <div id="lBreak" class="tabContent">
-              <h1 id ="hour"></h1>
-              <h1 id="mins"></h1>
-              <h1 id="secs"></h1>
+              <h1 id ="lhour"></h1>
+              <h1 id="lmins"></h1>
+              <h1 id="lsecs"></h1>
            </div>
+   <script src='/javascript/timer.js'></script>
       </article>
     </div>
 

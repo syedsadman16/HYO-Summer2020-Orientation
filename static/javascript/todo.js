@@ -24,7 +24,7 @@ function addListItem(input, time) {
 
 function addPomoButtonClicked() {
   pomos += 1;
-  document.getElementById("pomoCount").innerHTML = (pomos*25).toString() + " min";
+  setPomoText();
 }
 
 
@@ -42,7 +42,13 @@ function addTaskButtonClicked() {
     alert("Field cannot be empty");
   }
   pomos = 0; // resets pomo count to 0
+  setPomoText();
   return;
+}
+
+
+function setPomoText() {
+  document.getElementById("pomoCount").innerHTML = (pomos*25).toString() + " min";
 }
 
 // Removes list item clicked on

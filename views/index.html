@@ -24,10 +24,10 @@
            <div class="timerTabs">
               <button class="tabLinks" onClick="switchTimer(event, 'Pomo')">Pomodoro</button>
               <button class="tabLinks" onClick="switchTimer(event, 'sBreak')">Short Break</button>
-              <button class="tabLinks" onClick="switchTimer(event, 'lBreak')">Long Break</button>
+              <button class="tabLinks" onClick="switchTimer(event, 'lBreak'); startTimer(1)">Long Break</button>
            </div>
 
-           <div id="Pomo" class="tabContent">
+           <!--<div id="Pomo" class="tabContent">
               <h1 id ="hour">10</h1>
               <h1 id="mins">20</h1>
               <h1 id="secs">30</h1>
@@ -35,14 +35,14 @@
 
            <div id="sBreak" class="tabContent">
               <h1 id ="hour">5</h1>
-              <h1 id="mins">20</h1>
+              <h1 id="mins"></h1>
               <h1 id="secs">30</h1>
-           </div>
+           </div>-->
 
            <div id="lBreak" class="tabContent">
-              <h1 id ="hour">15</h1>
-              <h1 id="mins">20</h1>
-              <h1 id="secs">30</h1>
+              <h1 id ="hour"></h1>
+              <h1 id="mins"></h1>
+              <h1 id="secs"></h1>
            </div>
       </article>
     </div>

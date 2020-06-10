@@ -12,6 +12,7 @@
     margin:0;
   }
 
+  /* Positions each list item */
   li {
     margin: 0;
     padding-left: 20px;
@@ -20,21 +21,34 @@
     transition: 0.5;
   }
 
-  /* This adds box around new lsit item */
+  ul {
+    list-style-type: square;
+  }
+
+  /* This adds box around new list item */
   ul li {
     position: relative;
     background: rgb(55, 105, 211);
     font-size: 18px;
     padding: 5px;
-    width: 95%;
+    padding-bottom: 5px;
+    margin-left: 70px;
+    width: 80%;
     transition: 0.5s;
   }
   
   ul li:hover {
     background: rgb(168, 185, 230);
   }
-  
 
+  .time {
+    position: absolute;
+    right: 0;
+    padding-top: 5px;
+    padding-right: 10px;
+    top: 0;
+  }
+  
   .header {
     text-align: center;
     width: 100%;
@@ -50,30 +64,31 @@
     text-align: center;
   }
   
-  div {
-    height: 100%;
-  }
   
+  /* The <article> tag specifies independent, self-contained content. */
   article {
-    position: absolute;
-    top: 20%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    position: relative;
+    align-items: center;
     padding: 10px;
     width: 100%;
   }
-  
+
+  .items {
+    margin: 5px auto;
+  }
+
+
   h1 {
     font-size: 1.50rem;
   }
 
-  
+  /* Wrap everything under the header in a container */
   .container {
-    display: grid;
     width: 100%;
     height: 100%;
   }
   
+  /* Define section for the clock portion */
   .left {
     background-color: #d43d17b9;
     position: absolute;
@@ -82,15 +97,17 @@
     height: 50%;
   }
   
+  /* Define section for the todo list portion */
   .right {
+    display: inline-block;
     background-color: #3d25aa;
     position: absolute;
     right: 0px;
     width: 50%;
-    height: inherit;
-    flex-direction: row;
+    height: 100%;
   }
 
+  /* Define class for all buttons */
   .button {
     text-align: center;
     font-size: 16px;
@@ -105,6 +122,7 @@
     background-color: rgb(71, 177, 118);
   }
 
+  /* Design the input field */
   input {
     margin: 0;
     border: none;
@@ -115,7 +133,6 @@
   }
 
   #countdown {
-    
       position: relative;
       display: inline-block;
       font-size: 50px;
@@ -125,7 +142,6 @@
       align-items: center;
       color: white;
       margin: 0;
-  
   }
 
 

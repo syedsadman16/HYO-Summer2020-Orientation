@@ -24,6 +24,7 @@ function addListItem(input, time) {
 
 function addPomoButtonClicked() {
   pomos += 1;
+  document.getElementById("pomoCount").innerHTML = (pomos*25).toString() + " min";
 }
 
 

@@ -17,7 +17,7 @@ function addListItem(input, time) {
   item.appendChild(span);
 
   // Add all the items to list
-  list.appendChild(item);
+  list.prepend(item);
   return;
 }
 

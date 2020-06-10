@@ -35,16 +35,18 @@
       </article>
     </div>
 
-    <div class="right" id="todo">
+    <div class="right">
+      <div>
       <article>
         <h1>Todo list</h1>
         <input type="text" id="newTask"  placeholder="Add a new task"/>
         <span onclick="addTaskButtonClicked()" class="button" id="newTaskButton">Add</span>
         <span onclick="addPomoButtonClicked()" class="button" id="newPomoButton">Pomo</span>
-        <div class="items">
-          <ul id="list" onclick=remove()></ul>
-        </div>
       </article>
+    </div>
+      <div class="items">
+        <ul id="list" onclick=remove()></ul>
+      </div>
     </div>
   </section>
 

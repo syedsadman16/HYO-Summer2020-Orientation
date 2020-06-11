@@ -6,12 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PomoToDo</title>
     <link rel="stylesheet" type="text/css" href="/css/stylesheet.css">
+    <link rel="stylesheet" type="text/css" href="/css/timerstyle.css">
 
     <script src="/javascript/todo.js"></script>
     <script src="/javascript/timer.js"></script>
 </head>
 
-<body>
+<body >
 
   <div class="header">
     <h1>PomoToDo - Productivity Web App </h1>
@@ -20,18 +21,29 @@
   <section class="container">
     <div class="left" id="timer">
       <article>
-        <span class="button" onclick="set(25)">Pomodoro</span>
-        <span class="button" onclick="set(5)">Short Break</span>
-        <span class="button" onclick="set(15)">Long Break</span>
+           <div class="timerTabs" >
+              <button class="tabLinks" onClick="switchTimer(event, 'Pomo');">Pomodoro</button>
+              <button class="tabLinks" onClick="switchTimer(event, 'sBreak');">Short Break</button>
+              <button class="tabLinks" onClick="switchTimer(event, 'lBreak');">Long Break</button>
+           </div>
 
-        <div>
-          <p id="countdown"></p>
-        </div>
+           <div id="Pomo" class="tabContent">
+              <h1 id ="PomoCount"></h1>
+           </div>
 
-        <div>
-          <span class="button" id="start-stop" onclick="timer()">Start</span>
-        </div>
-        <script src="/javascript/timer.js"></script>
+           <div id="sBreak" class="tabContent">
+              <h1 id ="sBreakCount"></h1>
+           </div>
+
+           <div id="lBreak" class="tabContent">
+              <h1 id ="lBreakCount"></h1>
+           </div>
+
+           <div>
+              <button id="startButton" onclick="startTimer()"> START </button>
+              <button id="stopButton" onclick="stopTimer()" > STOP </button>
+           </div>
+   <script src='/javascript/timer.js'></script>
       </article>
     </div>
 

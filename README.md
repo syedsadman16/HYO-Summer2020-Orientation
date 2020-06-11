@@ -29,7 +29,7 @@ npm install
 
 4. Start a development server to see your changes rendered live as you make them.
 ```
-nodemon app.js
+npx nodemon app.js
 ```
 
 5. View the rendered content at [http://localhost:1337](http://localhost:1337). 

@@ -1,4 +1,6 @@
+//const timer = require("timer");
 var pomos = 0;
+var selectedPomos = 1;
 
 function addListItem(input, time) {
   let list = document.getElementById("list");
@@ -35,7 +37,7 @@ function addTaskButtonClicked() {
 
     /* Add pomodoro time clicked logic here */
 
-    addListItem(text, pomos*25); // each pomo represents 25 minutes
+    addListItem(text, pomos* time["Pomo"]); // each pomo represents 25 minutes
     document.getElementById("newTask").value = "";
   }
   else {
@@ -48,14 +50,17 @@ function addTaskButtonClicked() {
 
 
 function setPomoText() {
-  document.getElementById("pomoCount").innerHTML = (pomos*25).toString() + " min";
+  document.getElementById("pomoCount").innerHTML = (pomos*time["Pomo"]).toString() + " min";
 }
 
 // Removes list item clicked on
 function remove() {
   document.getElementById("list").addEventListener("click",function(e) {
     if (e.target.tagName.toUpperCase() == "LI") {
-      e.target.parentNode.removeChild(e.target);
+      //e.target.parentNode.removeChild(e.target);
+       selectedPomos =  e.target.innerHTML;
+       selectedPomos = selectedPomos.substring(0,1);
     }
+     console.log(selectedPomos);
   });
 }

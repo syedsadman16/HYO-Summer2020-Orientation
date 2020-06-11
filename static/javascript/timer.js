@@ -1,7 +1,7 @@
 var interval, activeTimer;
 
 var time = {
-   "Pomo": 25,
+   "Pomo": 30,
    "sBreak":5,
    "lBreak":15
 }

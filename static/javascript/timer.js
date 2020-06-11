@@ -2,8 +2,8 @@ var interval, activeTimer;
 
 var time = {
    "Pomo": 25,
-   "sBreak": .1,
-   "lBreak": 15
+   "sBreak":5,
+   "lBreak":15
 }
 
 window.onload = function() {
@@ -20,7 +20,7 @@ function switchTimer(evt, timer) {
    for (let i = 0; i < tabLinks.length; i++) {
       tabLinks[i].className = tabLinks[i].className.replace(" active", "");
    }
-   document.getElementById(timer).style.display = "block";
+   document.getElementById(timer).style.display = "inline";
    activeTimer = timer;
    if (evt) evt.currentTarget.className += " active";
 
@@ -40,7 +40,7 @@ function startTimer() {
       output(delta);
       if (delta <= 0) {
          stopTimer();
-         output(0);
+         switchTimer(0, 'Pomo');
       }
    }, 100);
 
@@ -60,9 +60,11 @@ function output(delta) {
    let seconds =  Math.floor((delta / 1000) % 60);
    let minutes = Math.floor(delta / (1000 * 60) % 60);
    let hours = Math.floor(delta / (1000 * 60 * 60));
-   document.getElementById(activeTimer + "Hour").innerHTML = (hours == 0) ? "" : hours;
-   document.getElementById(activeTimer + "Mins").innerHTML = (minutes < 10) ? "0" + minutes:minutes;
-   document.getElementById(activeTimer + "Secs").innerHTML = (seconds < 10) ? "0" + seconds : seconds;
+   let hourCount = (hours == 0) ? "" : ((hours < 10)? "0" + hours : hours) +  ':';
+   let minsCount = (minutes < 10) ? "0" + minutes : minutes;
+   let secCount = (seconds < 10) ? "0" + seconds : seconds;
+   let countdown = `${hourCount}  ${minsCount} : ${secCount}`
+   document.getElementById(activeTimer + "Count").innerHTML = countdown;
 }
 
 

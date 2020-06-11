@@ -12,7 +12,7 @@
     <script src="/javascript/timer.js"></script>
 </head>
 
-<body>
+<body >
 
   <div class="header">
     <h1>PomoToDo - Productivity Web App </h1>
@@ -21,29 +21,33 @@
   <section class="container">
     <div class="left" id="timer">
       <article>
-<<<<<<< HEAD
-           <div class="timerTabs">
-              <button class="tabLinks" onClick="switchTimer(event, 'Pomo'); startTimer(1, 'p');">Pomodoro</button>
-              <button class="tabLinks" onClick="switchTimer(event, 'sBreak'); startTimer(1, 's');">Short Break</button>
-              <button class="tabLinks" onClick="switchTimer(event, 'lBreak'); startTimer(1, 'l');">Long Break</button>
+           <div class="timerTabs" >
+              <button class="tabLinks" onClick="switchTimer(event, 'Pomo');">Pomodoro</button>
+              <button class="tabLinks" onClick="switchTimer(event, 'sBreak');">Short Break</button>
+              <button class="tabLinks" onClick="switchTimer(event, 'lBreak');">Long Break</button>
            </div>
 
            <div id="Pomo" class="tabContent">
-              <h1 id ="phour"></h1>
-              <h1 id="pmins"></h1>
-              <h1 id="psecs"></h1>
+              <h1 id ="PomoHour"></h1>
+              <h1 id="PomoMins"></h1>
+              <h1 id="PomoSecs"></h1>
            </div>
 
            <div id="sBreak" class="tabContent">
-              <h1 id ="shour"></h1>
-              <h1 id="smins"></h1>
-              <h1 id="ssecs"></h1>
+              <h1 id ="sBreakHour"></h1>
+              <h1 id="sBreakMins"></h1>
+              <h1 id="sBreakSecs"></h1>
            </div>
 
            <div id="lBreak" class="tabContent">
-              <h1 id ="lhour"></h1>
-              <h1 id="lmins"></h1>
-              <h1 id="lsecs"></h1>
+              <h1 id ="lBreakHour"></h1>
+              <h1 id="lBreakMins"></h1>
+              <h1 id="lBreakSecs"></h1>
+           </div>
+
+           <div>
+              <button id="startButton" onclick="startTimer()"> START </button>
+              <button id="stopButton" onclick="stopTimer()" style="display:none"> STOP </button>
            </div>
    <script src='/javascript/timer.js'></script>
       </article>

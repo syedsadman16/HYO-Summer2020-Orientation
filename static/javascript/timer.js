@@ -5,7 +5,7 @@ var time = {
    "sBreak":5,
    "lBreak":15
 }
-
+var timeLeft;
 window.onload = function() {
    switchTimer(0,'Pomo');
 }
@@ -28,15 +28,16 @@ function switchTimer(evt, timer) {
 
    output(currTime);
    stopTimer();
+   timeLeft = time[activeTimer] * 60000;
 }
 
 
 function startTimer() {
-   let totalTime = time[activeTimer] * 60000;
-   let end = Date.now() + totalTime;
+   let end = Date.now() + timeLeft;
    
    interval = setInterval(()=> {
       let delta = end - Date.now(); 
+      timeLeft = delta;
       output(delta);
       if (delta <= 0) {
          stopTimer();

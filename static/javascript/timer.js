@@ -75,3 +75,12 @@ function toggleButton(isStart) {
    document.getElementById("stopButton").style.display = (isStart) ? "none" : "inline";
 }
 
+
+function toggleActive(btnName){
+  tabLinks = document.getElementsByClassName("tabLinks");
+   for (let i = 0; i < tabLinks.length; i++) {
+     if (tabLinks[i] == btnName)
+      tabLinks[i].className = tabLinks[i].className.replace(" active", "");
+   }
+
+}

@@ -45,13 +45,8 @@ function addTaskButtonClicked() {
       document.getElementById("newTask").value = "";
    
   }
-
   else {
     alert("Field cannot be empty");
-  }
-
-  if (pomos.isNan) {
-    alert("Pomos must be a number");
   }
   
   pomos = 0; // resets pomo count to 0

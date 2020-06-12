@@ -1,13 +1,16 @@
 var interval, activeTimer;
 
 var time = {
-   "Pomo": 30,
+   "Pomo": 25,
    "sBreak":5,
    "lBreak":15
 }
+
 var timeLeft;
 window.onload = function() {
+  
    switchTimer(0,'Pomo');
+   toggleActive('Pomodoro');
 }
 
 function switchTimer(evt, timer) {
@@ -24,11 +27,11 @@ function switchTimer(evt, timer) {
    activeTimer = timer;
    if (evt) evt.currentTarget.className += " active";
 
-   let currTime = time[timer] * 60000; 
+   let currTime = time[timer] * selectedPomos * 60000; 
 
    output(currTime);
    stopTimer();
-   timeLeft = time[activeTimer] * 60000;
+   timeLeft = currTime;
 }
 
 
@@ -41,7 +44,16 @@ function startTimer() {
       output(delta);
       if (delta <= 0) {
          stopTimer();
-         switchTimer(0, 'Pomo');
+         if (activeTimer == 'Pomo')
+         {
+            switchTimer(0, 'sBreak');
+            toggleActive('Short Break');
+         }
+         else
+         {
+            switchTimer(0, 'Pomo');
+            toggleActive('Pomodoro');
+         }
       }
    }, 100);
 
@@ -74,3 +86,13 @@ function toggleButton(isStart) {
    document.getElementById("stopButton").style.display = (isStart) ? "none" : "inline";
 }
 
+
+function toggleActive(btnName){
+  tabLinks = document.getElementsByClassName("tabLinks");
+   for (let i = 0; i < tabLinks.length; i++) {
+     if (tabLinks[i].innerHTML == btnName) {
+      tabLinks[i].className = tabLinks[i].className += " active";
+     }
+   }
+
+}

@@ -1,6 +1,7 @@
 //const timer = require("timer");
 var selectedPomos = 1;
 var listPomo = {};
+var listMins = {};
 
 function addListItem(input, time) {
   let list = document.getElementById("list");
@@ -24,26 +25,22 @@ function addListItem(input, time) {
   return;
 }
 
-/*
-function addPomoButtonClicked() {
-  pomos += 1;
-  setPomoText();
-}
-*/
-
 
 function addTaskButtonClicked() {
   let text = document.getElementById("newTask").value;
   let pomos = document.getElementById("pomoCount").value;
-  time["Pomo"] = document.getElementById("minCount").value;
+  updateTime(document.getElementById("minCount").value)
   if (text != "") {
-  
-        /* Add pomodoro time clicked logic here */
+
+      /* Add pomodoro time clicked logic here */
       listPomo[text] = pomos;
+      listMins[text] = time['Pomo'];
       selectedPomos = pomos;
       addListItem(text, pomos * time["Pomo"]); // time from timer.js
       document.getElementById("newTask").value = "";
-   
+      //document.getElementById("pomoCount").value = "";
+      //document.getElementById("minCount").value = "";
+      
   }
   else {
     alert("Field cannot be empty");
@@ -67,8 +64,15 @@ function remove() {
        let str = e.target.innerHTML;
        let n = str.search("<");
        selectedPomos = listPomo[str.substr(0,n)];
+       updateTime(listMins[str.substr(0,n)]);
        switchTimer(0, "Pomo");
     }
   });
+}
+
+function updateTime(pomoTime) {
+  time['Pomo'] = pomoTime;
+  time['sBreak'] = time['Pomo'] / 5;
+  time['lBreak'] = time['Pomo'] / 1.7;
 }
 

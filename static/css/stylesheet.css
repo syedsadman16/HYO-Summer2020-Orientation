@@ -19,14 +19,14 @@
   /* Positions each list item */
   li {
     margin: 0;
-    padding-left: 20px;
+    padding-left: 100px;
     text-align: left;
     list-style-position: inside;
     transition: 0.5;
   }
 
   ul {
-    list-style-type: square;
+    list-style-type: none;
   }
 
   /* This adds box around new list item */
@@ -40,18 +40,37 @@
     width: 80%;
     transition: 0.5s;
   }
+
   
   ul li:hover {
     background:  #5ed7bf;
   }
 
+
   .time {
     position: absolute;
     right: 0;
     padding-top: 5px;
-    padding-right: 10px;
+    padding-right: 40px;
     top: 0;
   }
+
+  .close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    background-color: #555f67;
+  }
+
+  .close:hover {
+    background-color: #f44336;
+  }
+
+
   
   .header {
     text-align: center;
@@ -100,9 +119,9 @@
     position: absolute;
     left: 0px;
     width: 50%;
-    height: 50%;
+    height: 100%;
     font-family: 'Titillium Web', sans-serif;
-
+    padding-top: 30px;
   }
   
   /* Define section for the todo list portion */
@@ -121,14 +140,12 @@
   .button {
     text-align: center;
     font-size: 16px;
-    padding: 10px;
+    padding: 11px;
     width: 25%;
-    transition: 0.5s;
     color: white;
-   background: #516269;
-   border-color:#5ed7bf;
-   font-family: 'Titillium Web', sans-serif;
-
+    background: #516269;
+    border-color:#5ed7bf;
+    font-family: 'Titillium Web', sans-serif;
   }
 
   .button:hover {
@@ -139,10 +156,15 @@
   input {
     margin: 0;
     border: none;
-    width: 50%;
+    width: 47%;
     padding: 10px;
     font-size: 16px;
     transition: 0.5s;
+  }
+
+  .smallInput {
+    width: 100px;
+    margin-left: 10px;
   }
 
   #countdown {

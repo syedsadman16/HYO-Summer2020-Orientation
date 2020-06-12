@@ -10,7 +10,7 @@ var timeLeft;
 window.onload = function() {
   
    switchTimer(0,'Pomo');
-   toggleActive('Pomodoro');
+   toggleActive('POMODORO');
 }
 
 function switchTimer(evt, timer) {
@@ -47,12 +47,12 @@ function startTimer() {
          if (activeTimer == 'Pomo')
          {
             switchTimer(0, 'sBreak');
-            toggleActive('Short Break');
+            toggleActive('SHORT BREAK');
          }
          else
          {
             switchTimer(0, 'Pomo');
-            toggleActive('Pomodoro');
+            toggleActive('POMODORO');
          }
       }
    }, 100);

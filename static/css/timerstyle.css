@@ -42,8 +42,14 @@
 }
 
 
-.startBtn:hover {
-   background:#ff5757;
+#startButton:hover {
+   width: 190px;
+   height: 90px;
+}
+
+#stopButton:hover {
+   width: 190px;
+   height: 90px;
 }
 
 

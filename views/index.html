@@ -55,14 +55,14 @@
         <h1>Todo list</h1>
         <input type="text" id="newTask"  placeholder="Add a new task"/>
         <span onclick="addTaskButtonClicked()" class="button" id="newTaskButton">Add</span>
-        <input type="number" min="0" id="minCount"  placeholder="minutes"/>
+        <input type="number" min="0" max="1440" class="smallInput" id="minCount"  placeholder="minutes"/>
+        <input type="number" min="1" max="10" class="smallInput" id="pomoCount"  placeholder="# pomo"/>
         <!--<span onclick="addPomoButtonClicked()" class="button" id="newPomoButton">Pomo</span> -->
         <!--<span class="text" id="pomoCount">0 min</span> -->
-        <input type="number" min="0" id="pomoCount"  placeholder="# pomos"/>
       </article>
     </div>
       <div class="items">
-        <ul id="list" onclick=remove()></ul>
+        <ul id="list" onclick=select()></ul>
       </div>
     </div>
   </section>

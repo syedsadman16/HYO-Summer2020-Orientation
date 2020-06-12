@@ -12,12 +12,19 @@ function addListItem(input, time) {
   
   // Create span with time
   var span = document.createElement("SPAN");
-  var timeText = document.createTextNode(time + " minutes");
+  var timeText = document.createTextNode(time + " min");
   span.className = "time";
   span.appendChild(timeText);
 
+  var span2 = document.createElement("SPAN");
+  var x = document.createTextNode("X");
+  span2.className = "close";
+  span2.appendChild(x);
+ 
+
   // Append span to list item
   item.appendChild(span);
+  item.appendChild(span2);
 
   // Add all the items to list
   list.append(item);
@@ -58,14 +65,14 @@ function setPomoText() {
 }
 
 // Removes list item clicked on
-function remove() {
+function select() {
   document.getElementById("list").addEventListener("click",function(e) {
     if (e.target.tagName.toUpperCase() == "LI") {
        let str = e.target.innerHTML;
        let n = str.search("<");
        selectedPomos = listPomo[str.substr(0,n)];
        updateTime(listMins[str.substr(0,n)]);
-       switchTimer(0, "Pomo");
+       switchTimer(0, "Pomo"); 
     }
   });
 }

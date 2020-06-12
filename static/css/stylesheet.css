@@ -55,6 +55,22 @@
     top: 0;
   }
 
+  .close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    background-color: #555f67;
+  }
+
+  .close:hover {
+    background-color: #f44336;
+  }
+
+
   
   .header {
     text-align: center;

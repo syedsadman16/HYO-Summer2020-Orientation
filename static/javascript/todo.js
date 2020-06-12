@@ -67,13 +67,22 @@ function setPomoText() {
 // Removes list item clicked on
 function select() {
   document.getElementById("list").addEventListener("click",function(e) {
-    if (e.target.tagName.toUpperCase() == "LI") {
+    let index = e.target;
+    let parent = index.parentNode;
+
+    if (index.tagName.toUpperCase() == "LI") {
        let str = e.target.innerHTML;
        let n = str.search("<");
        selectedPomos = listPomo[str.substr(0,n)];
        updateTime(listMins[str.substr(0,n)]);
-       switchTimer(0, "Pomo"); 
+       switchTimer(0, "Pomo");
     }
+
+    let close = document.getElementsByClassName("close");
+    close.onclick = function() {
+      parent.removeChild(index); 
+    }
+
   });
 }
 

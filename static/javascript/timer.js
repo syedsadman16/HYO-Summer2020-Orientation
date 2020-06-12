@@ -8,7 +8,7 @@ var time = {
 
 var timeLeft;
 window.onload = function() {
-  
+
    switchTimer(0,'Pomo');
    toggleActive('POMODORO');
 }
@@ -27,7 +27,7 @@ function switchTimer(evt, timer) {
    activeTimer = timer;
    if (evt) evt.currentTarget.className += " active";
 
-   let currTime = time[timer] * selectedPomos * 60000; 
+   let currTime = time[timer] * selectedPomos * 60000;
 
    output(currTime);
    stopTimer();
@@ -37,9 +37,9 @@ function switchTimer(evt, timer) {
 
 function startTimer() {
    let end = Date.now() + timeLeft;
-   
+
    interval = setInterval(()=> {
-      let delta = end - Date.now(); 
+      let delta = end - Date.now();
       timeLeft = delta;
       output(delta);
       if (delta <= 0) {
@@ -57,8 +57,9 @@ function startTimer() {
       }
    }, 100);
 
-   
+
    toggleButton(false);
+   document.getElementById("fu_message").innerHTML = "";
 }
 
 
@@ -66,6 +67,7 @@ function stopTimer() {
    (interval) ? clearInterval(interval) : null;
    toggleButton(true);
 
+   document.getElementById("fu_message").innerHTML = "Get back to work you lazy piece of human garbage!";
 }
 
 

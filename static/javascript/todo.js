@@ -37,26 +37,29 @@ function addTaskButtonClicked() {
   let text = document.getElementById("newTask").value;
   let pomos = document.getElementById("pomoCount").value;
   updateTime(document.getElementById("minCount").value)
-  if (text != "") {
 
+  if (text != "") {
       /* Add pomodoro time clicked logic here */
       listPomo[text] = pomos;
       listMins[text] = time['Pomo'];
       selectedPomos = pomos;
-      addListItem(text, pomos * time["Pomo"]); // time from timer.js
-      document.getElementById("newTask").value = "";
-      //document.getElementById("pomoCount").value = "";
-      //document.getElementById("minCount").value = "";
-      
+      addListItem(text, pomos * time["Pomo"]); // time from timer.js   
   }
   else {
     alert("Field cannot be empty");
   }
-  
+
   pomos = 0; // resets pomo count to 0
+  clearFields();
   setPomoText();
   switchTimer(evt, "Pomo");
   return;
+}
+
+function clearFields() {
+  document.getElementById("newTask").value = "";
+  document.getElementById("pomoCount").value = "# pomo";
+  document.getElementById("minCount").value = "minutes";
 }
 
 
@@ -68,7 +71,7 @@ function setPomoText() {
 function select() {
   document.getElementById("list").addEventListener("click",function(e) {
     let index = e.target;
-    let parent = index.parentNode;
+    var close = document.getElementsByClassName("close");
 
     if (index.tagName.toUpperCase() == "LI") {
        let str = e.target.innerHTML;
@@ -78,10 +81,11 @@ function select() {
        switchTimer(0, "Pomo");
     }
 
-    let close = document.getElementsByClassName("close");
-    close.onclick = function() {
-      parent.removeChild(index); 
+    for (var i = 0; i < close.length; i++) {
+      close[i].onclick = function() {
+      this.parentElement.style.display = "none";
     }
+}
 
   });
 }

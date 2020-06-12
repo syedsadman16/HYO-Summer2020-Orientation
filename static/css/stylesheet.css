@@ -1,10 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web');
 
-  * {
+
+
+* {
     box-sizing: border-box;
   }
   
   body {
     font-size: 1.50rem;
+    background: #35404a;
   }
 
   html, body, div {
@@ -28,7 +32,7 @@
   /* This adds box around new list item */
   ul li {
     position: relative;
-    background: rgb(55, 105, 211);
+    background:#555f67;
     font-size: 18px;
     padding: 5px;
     padding-bottom: 5px;
@@ -38,7 +42,7 @@
   }
   
   ul li:hover {
-    background: rgb(168, 185, 230);
+    background:  #5ed7bf;
   }
 
   .time {
@@ -53,10 +57,12 @@
     text-align: center;
     width: 100%;
     padding: 30px;
-    background: #1abc9c;
+    background: #35404a;
     color: white;
     font-size: 30px;
     position: relative;
+    font-family: 'Titillium Web', sans-serif;
+
   }
   
   section {
@@ -90,36 +96,43 @@
   
   /* Define section for the clock portion */
   .left {
-    background-color: #d43d17b9;
+    background-color:#35404a;
     position: absolute;
     left: 0px;
     width: 50%;
     height: 50%;
+    font-family: 'Titillium Web', sans-serif;
+
   }
   
   /* Define section for the todo list portion */
   .right {
     display: inline-block;
-    background-color: #3d25aa;
+    background-color: #35404a;
     position: absolute;
     right: 0px;
     width: 50%;
     height: 100%;
+    font-family: 'Titillium Web', sans-serif;
+
   }
 
   /* Define class for all buttons */
   .button {
     text-align: center;
     font-size: 16px;
-    color: rgb(15, 15, 15);
     padding: 10px;
     width: 25%;
-    background: #FFF;
     transition: 0.5s;
+    color: white;
+   background: #516269;
+   border-color:#5ed7bf;
+   font-family: 'Titillium Web', sans-serif;
+
   }
 
   .button:hover {
-    background-color: rgb(71, 177, 118);
+    background-color:#5ed7bf;
   }
 
   /* Design the input field */
@@ -143,6 +156,18 @@
       color: white;
       margin: 0;
   }
+
+  ::placeholder {
+    color: #516269;
+    font-family: 'Titillium Web', sans-serif;
+  }
+
+  #newTask {
+    color: #516269;
+    font-family: 'Titillium Web', sans-serif;
+  }
+
+
 
 
   

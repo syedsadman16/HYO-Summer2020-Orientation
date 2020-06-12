@@ -1,7 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web');
+
+
 .tabContent {
    display: none;
 }
+
+.tabLinks {
+
+   color: white;
+   background: #516269;
+   height:20px;
+   width:120 px;
+   border: none;
+   font-family: 'Titillium Web', sans-serif;
+
+}
+
+.active {
+   background: #4ee3c2;
+}
+
+
+#startButton {
+   color: white;
+   background:#ff5757;
+   font-family: 'Titillium Web', sans-serif;
+   border: none;
+
+}
+
+
 #stopButton {
    display: none;
+   color: white;
+   background:#ff5757;
+   font-family: 'Titillium Web', sans-serif;
+   border: none;
+
 }
 

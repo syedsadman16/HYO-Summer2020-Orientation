@@ -25,30 +25,29 @@
 }
 
 
-#startButton {
+#startButton, #stopButton {
    color: white;
    background:#5bc25d;
-   font-size: 16px;
+   font-size: 36px;
    padding: 10px;
    font-family: 'Titillium Web', sans-serif;
    border: none;
+   width: 200px;
+   height: 100px;
+
 }
+
+#stopButton {
+   background:#ff5757;
+}
+
 
 .startBtn:hover {
    background:#ff5757;
 }
 
 
-#stopButton {
-   display: none;
-   color: white;
-   background:#ff5757;
-   font-family: 'Titillium Web', sans-serif;
-   border: none;
-
-}
-
-#PomoCount {
+#PomoCount, #sBreakCount, #lBreakCount {
   font-size: 10.50rem;
   margin: 0px;
   padding: 0px;

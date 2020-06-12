@@ -67,9 +67,13 @@ function stopTimer() {
    (interval) ? clearInterval(interval) : null;
    toggleButton(true);
 
-   document.getElementById("fu_message").innerHTML = "Get back to work you lazy piece of human garbage!";
 }
 
+
+function stopButtonClicked() {
+   document.getElementById("fu_message").innerHTML = "Get back to work you lazy piece of human garbage!";
+   stopTimer();
+}
 
 function output(delta) {
    let seconds =  Math.floor((delta / 1000) % 60);

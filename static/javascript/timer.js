@@ -2,9 +2,10 @@ var interval, activeTimer;
 
 var time = {
    "Pomo": 30,
-   "sBreak":5,
+   "sBreak":.1,
    "lBreak":15
 }
+
 var timeLeft;
 window.onload = function() {
    switchTimer(0,'Pomo');
@@ -24,11 +25,11 @@ function switchTimer(evt, timer) {
    activeTimer = timer;
    if (evt) evt.currentTarget.className += " active";
 
-   let currTime = time[timer] * 60000; 
+   let currTime = time[timer] * selectedPomos * 60000; 
 
    output(currTime);
    stopTimer();
-   timeLeft = time[activeTimer] * 60000;
+   timeLeft = currTime;
 }
 
 

@@ -5,6 +5,7 @@
   
   body {
     font-size: 1.50rem;
+    background: #222a2c;
   }
 
   html, body, div {
@@ -90,7 +91,7 @@
   
   /* Define section for the clock portion */
   .left {
-    background-color: #d43d17b9;
+    background-color: #222a2c;
     position: absolute;
     left: 0px;
     width: 50%;
@@ -100,7 +101,7 @@
   /* Define section for the todo list portion */
   .right {
     display: inline-block;
-    background-color: #3d25aa;
+    background-color: #222a2c;
     position: absolute;
     right: 0px;
     width: 50%;

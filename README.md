@@ -1,5 +1,7 @@
 # Hack Your Own Summer 2020 Orientation Project
 ## Team Scorpius
+For our orientation project, we created PomoToDo, a minimalist task tracking with a todo timer. With PomoToDo, you fill up your todo list, assign an estimated time to each task with the number of pomodoros, and press start. The app will begin counting down and reward you with free time after you complete a task. After your break is up, continue working on your assignment for the remaining pomodoros.  
+
 
 # Preview
 <img src='Image.PNG' title='Screenshot' width='' alt='' /> 

@@ -1,6 +1,9 @@
 # Hack Your Own Summer 2020 Orientation Project
 ## Team Scorpius
 
+# Preview
+<img src='Image.PNG' title='Screenshot' width='' alt='' /> 
+
 # BUILDING
 
 ## Requirements
